@@ -10,9 +10,10 @@
 // 상수(변하는 않는 값, 식별)
 #define PI 3.141592f
 
-#define POWX(x) (x * x)
+#define POWX(x) (x * x) // x의 제곱
 #define CIRCLE_AREA(r) (PI * (r * r))
 #define CIRCLE_AREA2(r) (PI * POWX(r))
+// -> 치환 (3.141592f * (3.0f * 3.0f))
 #define CIRCLE_AREA3(r) (PI * POWX(r))
 #define CIRCLE_AROUND(r) (PI * 2 * r)
 
