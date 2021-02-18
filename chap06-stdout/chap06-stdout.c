@@ -21,18 +21,14 @@ void putcharTest2();
 void putcTest3();
 void putsTest4();
 
-
 void main()
 {
     printf("%s\n", TITLE);
 
-    int x = putchar(1024);
-    printf("x(%c)(%d)\n", x, x);
-
     // putcharTest1();
     // putcharTest2();
     // putcTest3();
-    // putsTest4();
+    putsTest4();
 }
 
 void putsTest4()
