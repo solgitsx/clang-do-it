@@ -21,6 +21,8 @@ void printOct();
 void printHex();
 void printExponent();
 void printControlCode();
+void printControlTab();
+void printCR();
 
 void main()
 {
@@ -33,15 +35,42 @@ void main()
     // printOct();
     // printHex();
     // printExponent();
-    printControlCode();
+    // printControlCode();
+    // printControlTab();
+    printCR();
 }
 
 /*
-* 백슬래시(\)
+* Windows: CRLF(\r\n), 0x0d0x0a
+* Linux: LF(\n), 0x0a
+* Mac: CR(\r), 0x0d
+*/
+void printCR()
+{
+    printf("         *         *         *         *\n");
+    printf("1234567890123456789012345678901234567890\n");
+    printf("1234567890\rabc");
+}
+
+/*
+* 탭(tab) : \t
+* 기본 : 8자리(바이트)
+* 일반적으로 4자리
+*/
+void printControlTab()
+{
+    printf("         *         *         *         *\n");
+    printf("1234567890123456789012345678901234567890\n");
+    printf("a\tab\tdef\tg\th");
+}
+/*
+* 백슬래시(\):
+* 출력: \, %, "
 */
 void printControlCode()
 {
-    printf("소크라테스가 \\이렇게 말했습니다.\\ \"너 자신을 알라\"라고!\n");
+    printf("'소크라테스'가 \\이렇게 말했습니다.\\ \"너 자신을 알라\"라고!\n");
+    printf("올해의 실적은 150(%%) 성장하였습니다.\n");
 }
 
 void printExponent()
