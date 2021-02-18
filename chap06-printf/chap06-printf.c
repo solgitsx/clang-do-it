@@ -2,25 +2,81 @@
 * printf(...) 함수 예제
 */
 #include <stdio.h>
+#include <limits.h>
 
 #define TITLE "C표준 라이브러리와 표준 출력함수(printf)"
+
+#define MAX_CHAR    127
+#define MAX_SHORT   32767
+#define MAX_INT     2147483647
+#define MAX_UCHAR   0xff        // 256
+#define MAX_USHORT  0xffff      // 65535
+#define MAX_UINT    0xffffffff  // 4294967295
 
 void printBasic();
 void printWidth();
 void printUnsigned();
+void printUnsignedChar();
+void printOct();
+void printHex();
+void printExponent();
+void printControlCode();
 
 void main()
 {
     printf("%s\n", TITLE);
     // printBasic();
-    printWidth();
+    // printWidth();
     // printUnsigned();
+    // printUnsigned();
+    // printUnsignedChar();
+    // printOct();
+    // printHex();
+    // printExponent();
+    printControlCode();
 }
 
+/*
+* 백슬래시(\)
+*/
+void printControlCode()
+{
+    printf("소크라테스가 \\이렇게 말했습니다.\\ \"너 자신을 알라\"라고!\n");
+}
+
+void printExponent()
+{
+    float f = 12.13f;
+    printf("float: (%f), (%e), (%E)\n", f, f, f);
+}
+
+void printOct()
+{
+    printf("oct: char(%o), short(%o), int(%o), uchar(%o), ushort(%o), uint(%o)\n",
+        MAX_CHAR, MAX_SHORT, MAX_INT, MAX_UCHAR, MAX_USHORT, MAX_UINT);
+}
+void printHex()
+{
+    printf("oct: char(%x), short(%x), int(%x), uchar(%x), ushort(%x), uint(%x)\n",
+        MAX_CHAR, MAX_SHORT, MAX_INT, MAX_UCHAR, MAX_USHORT, MAX_UINT);
+}
+
+void printUnsignedChar()
+{
+    int sx = MAX_INT;
+    unsigned int ux = MAX_UINT;
+    printf("int(%d)(%u), unsigned int(%u) \n", sx + 1, sx, ux);
+}
+
+/*
+* 부호없는 정수 출력(%u)
+*/
 void printUnsigned()
 {
-
+    printf("char(%3c), short(%5d), int(%10d)\n", MAX_CHAR, MAX_SHORT, MAX_INT);
+    printf("char(%3c), short(%5d), int(%10u)\n", MAX_UCHAR, MAX_USHORT, MAX_UINT);
 }
+
 
 void printWidth()
 {
