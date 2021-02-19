@@ -15,7 +15,16 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="chap07-operator.c">
+    <ClCompile Include="chap07-assign.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07-arithmetic.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07-relational.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="chap07-logical.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
